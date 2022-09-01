@@ -1,0 +1,743 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\pgfplotsset{width=15cm}
+\usepackage{multirow}
+\usepackage[width=0.00cm, left=3.00cm, right=2.00cm, top=3.00cm, bottom=2.00cm]{geometry}
+\begin{document}
+	\begin{center}
+		\includegraphics[width=100px]{logo.png}\\
+		\textsc{Universidade Federal de Pernambuco\\
+			Centro de Ciências Sociais Aplicadas\\
+			Departamento de Ciências Contábeis e Atuariais\\}
+		\vspace{5cm}
+		\huge Lista 1\\ \normalsize
+		\vspace{4cm}
+	\end{center}
+	\newpage
+	\textbf{Resumindo os dados}\\
+	\textbf{Gráficos}\\
+	1º) Na tabela abaixo são listados os gastos com os cuidados com a saúde per capita em 1989 para 23 das 24 nações que constituem a Organização para Cooperação Econômica e Desenvolvimento.
+	\begin{center}
+		\begin{tabular}{|c|c|} \hline
+			\textbf{Nação} & \textbf{Gastos Per Capita (US\$)}\\ \hline
+			\textbf{Austrália} & 1032,00\\ \hline
+			\textbf{Áustria} & 1093,00\\ \hline
+			\textbf{Bélgica} & 980,00\\ \hline
+			\textbf{Inglaterra} & 836,00\\ \hline
+			\textbf{Canadá} & 1683,00\\ \hline
+			\textbf{Dinamarca} & 912,00\\ \hline
+			\textbf{Finlândia} & 1067,00\\ \hline
+			\textbf{França} & 1274,00\\ \hline
+			\textbf{Alemanha} & 1232,00\\ \hline
+			\textbf{Grécia} & 371,00\\ \hline
+			\textbf{Islândia} & 1353,00\\ \hline
+			\textbf{Irlanda} & 658,00\\ \hline
+			\textbf{Itália} & 1050,00\\ \hline
+			\textbf{Japão} & 1035,00\\ \hline
+			\textbf{Luxemburgo} & 1193,00\\ \hline
+			\textbf{Países Baixos} & 1135,00\\ \hline
+			\textbf{Nova Zelândia} & 820,00\\ \hline
+			\textbf{Noruega} & 1234,00\\ \hline
+			\textbf{Portugal} & 464,00\\ \hline
+			\textbf{Espanha} & 644,00\\ \hline
+			\textbf{Suécia} & 1361,00\\ \hline
+			\textbf{Suíça} & 1376,00\\ \hline
+			\textbf{Estados Unidos} & 2354,00\\ \hline	
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	a) Ordene esses países de acordo com os gastos per capita com a saúde.\\
+		\begin{center}
+		\begin{tabular}{|c|c|} \hline
+			\textbf{Nação} & \textbf{Gastos Per Capita (US\$)}\\ \hline
+			\textbf{Grécia} & 371,00\\ \hline
+			\textbf{Portugal} & 464,00\\ \hline
+			\textbf{Espanha} & 644,00\\ \hline
+			\textbf{Irlanda} & 658,00\\ \hline
+			\textbf{Nova Zelândia} & 820,00\\ \hline
+			\textbf{Inglaterra} & 836,00\\ \hline
+			\textbf{Dinamarca} & 912,00\\ \hline
+			\textbf{Bélgica} & 980,00\\ \hline
+			\textbf{Austrália} & 1032,00\\ \hline
+			\textbf{Japão} & 1035,00\\ \hline
+			\textbf{Itália} & 1050,00\\ \hline
+			\textbf{Finlândia} & 1067,00\\ \hline
+			\textbf{Áustria} & 1093,00\\ \hline
+			\textbf{Países Baixos} & 1135,00\\ \hline
+			\textbf{Luxemburgo} & 1193,00\\ \hline
+			\textbf{Alemanha} & 1232,00\\ \hline
+			\textbf{Noruega} & 1234,00\\ \hline
+			\textbf{França} & 1274,00\\ \hline
+			\textbf{Islândia} & 1353,00\\ \hline
+			\textbf{Suécia} & 1361,00\\ \hline
+			\textbf{Suíça} & 1376,00\\ \hline
+			\textbf{Canadá} & 1683,00\\ \hline
+			\textbf{Estados Unidos} & 2354,00\\ \hline	
+		\end{tabular}
+	\end{center}
+	\vspace{0.5cm}	
+	b) Construa um histograma para os valores dos gastos per capita.\\
+	\begin{tikzpicture}
+		\begin{axis}[xmin=0, xmax=2500, ymin=0, ymax=14, xstep=500, ystep=2, xlabel=Gasto Per Capita, ylabel=Frequência]
+		\addplot[ybar interval,mark=no] plot coordinates { (0, 2) (500,6) (1000, 13) (1500, 1) (2000, 1) (2500, 1) };
+		\end{axis}
+	\end{tikzpicture}
+	\vspace{0.5cm}\\
+	c) Descreva a forma do histograma.
+	\vspace{0.5cm}\\
+	O histograma tem maior frequência entre os intervalos de classe medianos, US\$ 500,00 a US\$ 1.000,00 e entre US\$ 1.000,00 US\$1.500,00, sugerindo uma possível distribuição normal dos dados, mas sendo necessário maiores análises para realizar tal afirmativa.
+	\vspace{1cm}\\
+	2º) A tabela abaixo categoriza 10.614.000 visitas ao consultório de especialistas de
+	doenças cardiovasculares nos estados unidos por duração de cada visita. Uma duração de 0 (zero) minuto implica que o paciente não teve contato direto com o especialista.\\
+	\begin{center}
+		\begin{tabular}{|c|c|} \hline
+			\textbf{Duração (minutos)} & \textbf{Número de visitas (milhares)}\\ \hline
+			\textbf{0} & 390\\ \hline 
+			\textbf{1-5} & 227\\ \hline
+			\textbf{6-10} & 1023\\ \hline
+			\textbf{11-15} & 3390\\ \hline
+			\textbf{16-30} & 4431\\ \hline
+			\textbf{31-60} & 968\\ \hline
+			\textbf{61+} & 185\\ \hline
+			\textbf{Total} & 10614\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{0.5cm}
+	Pode-se fazer a afirmação de que as visitas a consultórios de especialistas de doenças cardiovasculares têm duração mais frequente entre 16 e 30 min. Você concorda com	essa afirmação? Por quê? Justifique.
+	\vspace{0.5cm}\\
+	Sim, porque o período entre 16 e 30 min apresenta maior frequência que os demais intervalos de tempo de consulta.
+	\vspace{1cm}\\
+	\textbf{Medidas de posição e de dispersão}\\
+	3º) Na tabela abaixo estão taxas de glicose em miligramas por 100ml de sangue em ratos machos da raça Wistar com 30 dias de idade, que serão usados em um experimento para o teste de determinada droga. Ache a média e a mediana. A moda seria uma informação importante? Por quê?\\
+	\vspace{0.5cm}
+	\begin{center}
+		\small{Tabela 01 - Taxas de glicose em miligramas por 100ml de sangue\\
+		em ratos machos da raça Wistar com 30 dias de idade\\}
+		\begin{tabular}{|c|c|} \hline
+			\textbf{Nº do Rato} & \textbf{Taxa de glicose}\\ \hline
+			\textbf{1} & 101\\ \hline
+			\textbf{2} & 98\\ \hline
+			\textbf{3} & 97\\ \hline
+			\textbf{4} & 104\\ \hline
+			\textbf{5} & 95\\ \hline
+			\textbf{6} & 105\\	\hline
+		\end{tabular}
+		\hspace{1cm}
+		$\rightarrow$
+		\hspace{1cm}
+		\begin{tabular}{|c|c|} \hline
+			\textbf{Nº do Rato} & \textbf{Taxa de glicose}\\ \hline
+			\textbf{5} & 95\\ \hline
+			\textbf{3} & 97\\ \hline
+			\textbf{2} & 98\\ \hline
+			\textbf{1} & 101\\ \hline
+			\textbf{4} & 104\\ \hline
+			\textbf{6} & 105\\	\hline
+		\end{tabular}
+		\vspace{1cm}\\
+		Média = $\dfrac{95 + 97 + 98 + 101 + 104 + 105}{6} = \dfrac{600}{6} = 100$
+		\vspace{0.5cm}\\
+		Mediana = $\dfrac{98 + 101}{2} = \dfrac{199}{2} = 99,5$
+	\end{center}
+	\vspace{0.5cm}
+	Não, porque a frequência de todos os valores é igual a um.
+	\vspace{1cm}\\
+	4º) Com os dados apresentados na tabela que segue, calcule o número médio de dentes cariados, para cada sexo.
+	\begin{center}
+		\small{Tabela 02 – escolares de 12 anos, segundo o número de dentes cariados e o sexo}\\
+		\begin{tabular}{|c|c|c|} \hline
+			\multirow{2}*{\textbf{Nº de dentes cariados}} & \multicolumn{2}{c|}{\textbf{Sexo}}\\ \cline{2-3}
+			& \textbf{Masculino} & \textbf{Feminino}\\ \hline
+			\textbf{0} & 16 & 13\\ \hline
+			\textbf{1} &	2 &	5\\ \hline
+			\textbf{2} &	3 & 3\\ \hline
+			\textbf{3} &	2 &	2\\ \hline
+			\textbf{4} &	2 & 2 \\ \hline
+		\end{tabular}
+	\vspace{1cm}\\
+	Média$_{Masc} = \dfrac{0*16 + 1*2 + 2*3 + 3*2 + 4*2}{25} = \dfrac{0 + 2 + 6 + 6 + 8}{25} = \dfrac{22}{25} = 0,88$\\
+	\vspace{0.5cm}
+	Média$_{Fem} = \dfrac{0*13 + 1*5 + 2*3 + 3*2 + 4*2}{25} = \dfrac{0 + 5 + 6 + 6 + 8}{25} = \dfrac{25}{25} = 1$\\
+	\end{center}
+	\vspace{1cm}
+	5º) Para estudar o tempo de latência de um sonífero usado em ratos de laboratório, um pesquisador administrou o sonífero a 10 ratos e determinou o tempo que eles demoravam para dormir. Dos 10 ratos, dois demoraram meio minuto, quatro demoraram 1 minuto, três demoraram 1 minuto e meio e um rato não dormiu. Calcule o tempo médio da latência.\\
+	\vspace{0.5cm}
+	\begin{center}
+		Média= $\dfrac{2*0,5 + 4*1 + 3*1,5}{9} = \dfrac{1 + 4 + 4,5}{9} = \dfrac{9,5}{9} = 1,055$\\
+	\end{center}
+	\vspace{1cm}
+	6º) Para calcular dois programas de treinamento para executar um serviço especializado, foi feito um experimento. Dez homens foram selecionados ao acaso para serem treinados
+	pelo método A e outros 10 para serem treinados pelo método B. Terminado o treinamento, todos os homens fizeram o serviço e foi registrado o tempo em que cada um desempenhou a tarefa. Os dados estão na tabela a seguir. Encontre para cada método: mínimo, primeiro quartil, mediana, terceiro quartil e máximo. Compare e discuta.
+	\begin{center}
+		\small{Tabela 03 – Tempo, em minutos, despendido em\\ executar o serviço,segundo o método de treinamento}\\
+		\begin{tabular}{|c|c|} \hline
+			\multicolumn{2}{|c|}{\textbf{Método}}\\ \hline
+			\textbf{A} & \textbf{B}\\ \hline
+			15 & 23\\ \hline
+			20 & 31\\ \hline
+			11 & 13\\ \hline
+			23 & 19\\ \hline
+			16 & 23\\ \hline
+			21 & 17\\ \hline 
+			18 & 28\\ \hline
+			16 & 26\\ \hline
+			27 & 25\\ \hline
+			24 & 28\\ \hline
+		\end{tabular}
+		\hspace{1cm}
+		$\rightarrow$
+		\hspace{1cm}
+		\begin{tabular}{|c|c|} \hline
+			\multicolumn{2}{|c|}{\textbf{Método}}\\ \hline
+			\textbf{A} & \textbf{B}\\ \hline
+			11 & 13\\ \hline
+			15 & 17\\ \hline
+			16 & 19\\ \hline
+			16 & 23\\ \hline
+			18 & 23\\ \hline
+			20 & 25\\ \hline 
+			21 & 26\\ \hline
+			23 & 28\\ \hline
+			24 & 28\\ \hline
+			27 & 31\\ \hline
+		\end{tabular}
+		\vspace{0.5cm}\\
+		Mediana$_{A} = \dfrac{18 + 20}{2} = \dfrac{38}{2} = 19$
+		\vspace{0.5cm}\\
+		Mediana$_{B} = \dfrac{23 + 25}{2} = \dfrac{48}{2} = 24$
+		\vspace{0.5cm}\\
+		\begin{tabular}{|c|c|c|c|c|} \hline
+			\multicolumn{5}{|c|}{\textbf{Método A}}\\ \hline
+			Mínimo & 1º Quartil & Mediana & 3º Quartil & Máximo\\ \hline
+			11 & 16 & 19 & 23 & 27\\ \hline
+			\multicolumn{5}{|c|}{\textbf{Método B}}\\ \hline
+			Mínimo & 1º Quartil & Mediana & 3º Quartil & Máximo\\ \hline
+			13 & 19 & 24 & 28 & 31\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{0.5cm}
+	Todas as medidas tendência de A são menores que B, portanto, o método de treinamento A é mais eficiente.
+	\vspace{1cm}\\
+	7º) Responda às questões:\\
+	a) O valor do desvio padrão pode ser maior do que o valor da média?
+	\vspace{0.5cm}\\
+	Sim, o valor da média pode assumir qualquer valor do conjunto dos números  $\mathbb{R}$, enquanto o desvio padrão pertence apenas ao intervalo dos $\mathbb{R}$ maiores ou ou iguais a zero.
+	\vspace{1cm}\\
+	b) O valor do desvio padrão pode ser igual ao valor da média?
+	\vspace{0.5cm}\\
+	Sim, a média pode assumir valor igual ao desvio padrão.
+	\vspace{1cm}\\
+	c) O valor do desvio padrão pode ser negativo?
+	\vspace{0.5cm}\\
+	Não, os valores do desvio padrão são resultado da  raiz de uma potenciação, portanto os valores são sempre absolutos.
+	\vspace{1cm}\\
+	d) Quando o desvio padrão é igual a zero?
+	\vspace{0.5cm}\\
+	O desvio padrão é igual a zero, quando todas as observações numéricas são iguais.
+	\vspace{1cm}\\
+	8º) Considere a situação de uma loja de equipamentos de som. Em dez ocasiões durante os	três últimos meses , a loja usou comerciais de televisão de fins de semana para promover
+	as vendas. Os gerentes querem verificar se pode ser demonstrada uma relação entre o	numero de comerciais mostrados e as vendas na loja durante a semana seguinte. Os dados para as 10 semanas com vendas em centenas de dólares estão mostrados na tabela abaixo.	Construa o diagrama de dispersão considerando o número de comerciais como sendo o	eixo (x) e as vendas o eixo (y). Faça comentários sobre a relação entre as duas variáveis.
+	\begin{center}
+		\begin{tabular}{|c|c|c|} \hline
+			\textbf{Semana} & \textbf{Nº de Comerciais(x)} & \textbf{Volume de Vendas (por R\$ 100)}\\ \hline
+			\textbf{1} & 2 & 50\\ \hline
+			\textbf{2} & 5 & 57\\ \hline
+			\textbf{3} & 1 & 41\\ \hline
+			\textbf{4} & 3 & 54\\ \hline
+			\textbf{5} & 4 & 54\\ \hline
+			\textbf{6} & 1 & 38\\ \hline
+			\textbf{7} & 5 & 63\\ \hline
+			\textbf{8} & 3 & 48\\ \hline
+			\textbf{9} & 4 & 59\\ \hline
+			\textbf{10} & 2 & 46\\ \hline
+		\end{tabular}
+		\begin{tikzpicture}
+			\begin{axis}[xmin=0, xmax=6, ymin=35, ymax=65, xlabel=Nº de Comerciais, ylabel=Volume de Vendas]
+			\addplot[color=red, only marks,mark=*]
+			coordinates{
+				(2,50)
+				(5,57)
+				(1,41)
+				(3,54)
+				(4,54)
+				(1,38)
+				(5,63)
+				(3,48)
+				(4,59)
+				(2,46)
+			}; \label{plot_one}			
+			\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\vspace{0.5cm}
+	O gráfico sugere a existência de uma associação linear direta entre o número de comerciais veiculados e o volume de vendas.
+	\vspace{1cm}\\
+	9º) Um estudo foi conduzido para investigar o prognóstico a longo prazo de crianças que	sofreram um episódio agudo de meningite bacteriana. Abaixo estão listados os tempos para o ataque apoplético de 13 crianças que tomaram parte no estudo. Em meses, as medidas foram:
+	\begin{center}
+		\begin{tabular}{ccccccccccccc}
+			0,10 & 0,20 & 0,25 & 4 & 12 & 12 & 24 &	24 & 31 & 36 & 42 & 55 & 96
+		\end{tabular}
+	\end{center}
+	\vspace{0.5cm}
+	a) Obtenha as seguintes medidas-resumo numéricas dos dados\\
+	i. Média
+	\begin{center}
+		\vspace{0.25cm}
+		Média = $\dfrac{0,10 + 0,20 + 0,25 + 4 + 12 + 12 + 24 +	24 + 31 + 36 + 42 + 55 + 96}{13}$\\
+		\vspace{0.25cm}
+		Média= $\dfrac{336,55}{13} = 25,89$
+	\end{center}
+	\vspace{0.5cm}
+	ii. Mediana\\
+	\begin{center}
+		Mediana = 24
+	\end{center}
+	\vspace{0.5cm}
+	iii. Moda\\
+	\begin{center}
+		Moda = 12 e 24
+	\end{center}
+	\vspace{0.5cm}
+	iv. Amplitude\\
+	\begin{center}
+		Amplitude = $96 - 0,10 = 95,9$
+	\end{center}
+	\vspace{0.5cm}
+	v. Intervalo interquartil\\
+	\begin{center}
+		Intervalo interquartil = $\dfrac{(42 + 36) - (4 + 0,25)}{2} = \dfrac{73,75}{2} = 36,875$
+	\end{center}
+	\vspace{0.5cm}
+	vi. Desvio padrão\\
+		\begin{center}
+			\begin{tabular}{|c|c|c|} \hline
+				\multicolumn{2}{|c|}{$(x - \overline{x})$} & $(x - \overline{x})^2$\\ \hline
+				(0,10 - 25,89) & -25,79 & 665,1241\\ \hline
+				(0,20 -  25,89) & -25,69 & 665,9761\\ \hline
+				(0,25 - 25,89) & -25,64 & 657,4096\\ \hline
+				(4 - 25,89) & -21,89 & 479,1721\\ \hline
+				(12 - 25,89) & -13,89 & 192,9321\\ \hline
+				(12 - 25,89) & -13,89 & 192,9321\\ \hline
+				(24 - 25,89) & -1,89 & 3,5721\\ \hline
+				(24 - 25,89) & -1,89 & 3,5721\\ \hline
+				(31 -25,89) & 5,11 & 26,1121\\ \hline
+				(36 - 25,89) & 10,11 & 102,2121\\ \hline
+				(42 - 25,89) & 16,11 & 259,5321\\ \hline
+				(55 - 25,89) & 29,11 & 847,3921\\ \hline
+				(96 - 25,89) & 70,11 & 4.915,4121\\ \hline
+				\multicolumn{2}{|c|}{Total} & 9.011,3508\\ \hline
+			\end{tabular}
+		\vspace{0.5cm}\\
+		Desvio Padrão = $\sqrt{\dfrac{9.011,3508}{13}} = \sqrt{693,18} = 26,33$
+		\end{center}
+	\vspace{1cm}
+	b) Mostre$\Sigma(x - \overline{x})$ é igual a zero.
+	\begin{center}
+		$(-25,79) + (-25,69) + (-25,64) + (-21,89) + (-13,89) + (-13,89) + (-1,89) + (-1,89) + 5,11 + 10,11 + 16,11 + 29,11 + 70,11 = 0$
+	\end{center}
+	\vspace{1cm}
+	10º) Em Massachusetts, oito indivíduos sofreram um episodio inexplicável de intoxicação por vitamina D que exigiu hospitalização; pensou-se que essas ocorrências extraordinárias pudessem resultar de uma excessiva suplementação de leite. Os níveis de cálcio e albumina - um tipo de proteína - no sangue para cada indivíduo no momento da internação no hospital são mostrados abaixo:
+	\begin{center}
+		\begin{tabular}{|c|c|}\hline
+			\textbf{Cálcio (mmol/l)} & \textbf{Albumina (g/l)}\\ \hline
+			\textbf{2,92} & 43\\ \hline
+			\textbf{3,84} & 42\\ \hline
+			\textbf{2,37} & 42\\ \hline
+			\textbf{2,99} & 40\\ \hline
+			\textbf{2,67} & 42\\ \hline
+			\textbf{3,17} & 38\\ \hline
+			\textbf{3,74} & 34\\ \hline
+			\textbf{3,44} & 42\\ \hline
+		\end{tabular}
+	\hspace{0.1cm}
+	$\rightarrow$
+	\hspace{0.1cm}
+		\begin{tabular}{|c|c|}\hline
+			\textbf{Cálcio (mmol/l)} & \textbf{Albumina (g/l)}\\ \hline
+			\textbf{2,37} & 42\\ \hline
+			\textbf{2,67} & 42\\ \hline
+			\textbf{2,92} & 43\\ \hline
+			\textbf{2,99} & 40\\ \hline
+			\textbf{3,17} & 38\\ \hline
+			\textbf{3,44} & 42\\ \hline
+			\textbf{3,74} & 34\\ \hline
+			\textbf{3,84} & 42\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{0.1cm}
+	\hspace{3.5cm}
+	$\downarrow$\\
+	\vspace{0.1cm}\\
+	\begin{tabular}{|c|c|}\hline
+		\textbf{Cálcio (mmol/l)} & \textbf{Albumina (g/l)}\\ \hline
+		\textbf{3,74} & 34\\ \hline
+		\textbf{3,17} & 38\\ \hline
+		\textbf{2,99} & 40\\ \hline
+		\textbf{2,37} & 42\\ \hline
+		\textbf{2,67} & 42\\ \hline
+		\textbf{3,44} & 42\\ \hline
+		\textbf{3,84} & 42\\ \hline
+		\textbf{2,92} & 43\\ \hline
+	\end{tabular}
+
+	\vspace{0.5cm}
+	a) Obtenha a média, a mediana, o desvio-padrão e a amplitude dos níveis de cálcio registrados.\\
+	\begin{center}
+		Média = $\dfrac{2,37 + 2,67 + 2,92 + 2,99 + 3,17 + 3,44 + 3,74 + 3,84}{8} = \dfrac{25,14}{8} = 3,1425$
+		\vspace{0.5cm}\\
+		Mediana = $\dfrac{3,17 + 2,99}{2} = \dfrac{6,16}{2} = 3,08$
+		\vspace{0.5cm}\\
+		Desvio-padrão = $\sqrt{\dfrac{2,37^2 + 2,67^2 + 2,92^2 + 2,99^2 + 3,17^2 + 3,44^2 + 3,74^2 + 3,84^2}{8}}$
+		\vspace{0.1cm}\\
+		Desvio-padrão = $\sqrt{\dfrac{71,89}{8}} = 3$
+		\vspace{0.5cm}\\
+		Amplitude = $3,84 - 2,37 = 1,47$ 
+	\end{center}
+	\vspace{1cm}
+	b) Calcule a média, a mediana, o desvio-padrão e a amplitude para os dados de níveis de albumina.\\
+	\begin{center}
+		Média = $\dfrac{34 + 38 + 40 + 42 + 42 + 42 + 42 + 43}{8} = \dfrac{323}{8} = 40,375$
+		\vspace{0.5cm}\\
+		Mediana = $42$
+		\vspace{0.5cm}\\
+		Desvio-padrão = $\sqrt{\dfrac{34^2 + 38^2 + 40^2 + 42^2 + 42^2 + 42^2 + 42^2 + 43^2}{8}} = \sqrt{\dfrac{13.105}{8}} = 40,47$
+		\vspace{0.5cm}\\
+		Amplitude = $43 - 34 = 9$ 
+	\end{center}
+	\vspace{1cm}
+	c) Para indivíduos saudáveis, o intervalo normal de valores de cálcio é de 2,12 até 2,74 mmol/l, enquanto o intervalo de níveis de albumina é de 32 até 55 g/l. Você acredita que os pacientes que sofreram intoxicação por vitamina D tinham níveis normais de cálcio e de albumina no sangue?
+	\vspace{0.5cm}\\
+	Todos os pacientes apresentavam níveis normais albumina no sangue, enquanto a ampla maioria tinha níveis de cálcio acima da taxa padrão, sugerindo que as internações por intoxicação por vitamina D podem ter uma relação causal com os níveis de cálcio no organismo.
+	\vspace{1cm}\\
+	11º) Considere os dados da Questão 10 e faça o que se pede:\\
+	a) Construa um intervalo de confiança unilateral de 95\% - um limite inferior – para o nível médio verdadeiro de cálcio de indivíduos que sofreram a intoxicação de vitamina D\\
+	\begin{center}
+		Intervalo inferior = $\overline{x} - z*\dfrac{\sigma}{\sqrt{n}} = 3,1425 - 1,645*\dfrac{3}{\sqrt{8}} = 3,1425 - 1,745 = 1,3975$
+	\end{center}
+	\vspace{1cm}
+	b) Construa um intervalo de confiança unilateral inferior de 95\% para o nível médio verdadeiro de albumina desse grupo.\\
+		\begin{center}
+		Intervalo superior = $\overline{x} + z*\dfrac{\sigma}{\sqrt{n}} = 40,375 + 1,645*\dfrac{40,47}{\sqrt{8}} = 40,375 + 8,322 = 48,697$
+	\end{center}
+	\vspace{1cm}
+	c) Para indivíduos saudáveis, o intervalo normal de valores de cálcio é de 2,12 a 2,74 mmol/l e o intervalo de níveis de albumina é de 32 a 55 g/l. Você acredita os pacientes que
+	sofrem de intoxicação de vitamina D têm níveis normais de cálcio e de albumina no	sangue?
+	\vspace{0.5cm}
+	Os níveis albumina estão dentro de níveis considerados normais, enquanto os níveis de cálcio ultrapassam a margem superior dos valores normais.
+	\vspace{1cm}\\
+	\textbf{Sensibilidade e especificidade}\\
+	12º) Um estudo registrou que a sensibilidade da mamografia como teste de triagem para detecção do câncer de mama é 0,85, enquanto sua especificidade é 0,80.\\
+	a) Qual a probabilidade de um resultado de teste falso negativo?\\
+	\begin{center}
+		$\mathbb{P}$(Falso negativo) = 1$ - especifidade = 1 - 0,8 = 0,2$
+	\end{center}
+	\vspace{1cm}
+	b) Qual a probabilidade de resultado falso positivo?\\
+		\begin{center}
+		$\mathbb{P}$(Falso positivo) = $1 - sensibilidade = 1 - 0,85 = 0,15$
+	\end{center}
+	\vspace{1cm}
+	c) Na população na qual a probabilidade de que uma mulher tenha câncer de mama é 0,0025, qual a probabilidade de que tenha câncer, se sua mamografia for positiva?\\
+		\begin{center}
+		$\mathbb{P}$(Câncer de mama|Mamografia positiva) = sensibilidade*prevalência\\
+		\vspace{0,25cm}
+		$\mathbb{P}$(Câncer de mama|Mamografia positiva) = $0,85*0,0025 = 0,002125$
+	\end{center}
+	\vspace{1cm}
+	13º) O Instituto Nacional de Segurança Ocupacional e de Saúde desenvolveu uma	definição de casos de síndrome de túnel carpal – uma doença do punho – que incorpora três critérios: sintomas de envolvimento do nervo, história de fatores de risco ocupacional e a presença de materiais de exames físicos. A sensibilidade dessa definição como um teste	para a síndrome de túnel carpal é de 0,67; sua especificidade é de 0,58.\\
+	a) Em uma população cuja prevalência da síndrome de túnel carpal esta estimada em	15\%, qual o valor preditivo de um resultado positivo de teste?\\
+	\begin{center}
+		$\mathbb{P}$(Túnel do carpo|Teste positivo) = sensibilidade*prevalência\\
+		\vspace{0,25cm}
+		$\mathbb{P}$(Túnel do carpo|Teste positivo) = $0,67*0,15 = 0,1005$
+	\end{center}
+	\vspace{1cm}
+	b) Como esse valor preditivo se modifica, se a prevalência for somente 10\%? E se for 5\%?
+	\vspace{0.5cm}\\
+	Se o valor da prevalência passa a assumir o valor de 0,1, o valor preditivo diminui em 33\%, se a prevalência assume o valor de 0,05, o valor preditivo diminui em 66\%.   
+	\vspace{1cm}\\
+	14º) Os dados seguintes são tomados de um estudo que investiga o uso de uma técnica chamada ventriculografia radiolinotípica como teste de diagnóstico para se detectar doença	da artéria coronária.
+	\begin{center}
+		\begin{tabular}{|l|l|l|l|}\hline
+			\multirow{2}*{\textbf{Teste}} & \multicolumn{2}{|l|}{\textbf{Doença}} & \multirow{2}*{\textbf{Total}}\\ \cline{2-3}
+			& \textbf{Presente} & \textbf{Ausente} & \\ \hline
+			\textbf{Positivo} & 302 & 80 & 382\\ \hline
+			\textbf{Negativo} & 179 & 372 & 551\\ \hline
+			\textbf{Total} & 481 & 452 & 933\\ \hline
+		\end{tabular}
+	\end{center}
+	a) Qual a sensibilidade da ventrículografia radionuclídica nesse estudo? Qual a especificidade?\\
+	\begin{center}
+		Sensibilidade = $\dfrac{a}{a + c} = \dfrac{302}{302 + 179} = \dfrac{302}{481} = 0,63$
+		\vspace{0.5cm}\\
+		Especificidade = $\dfrac{d}{b + d} = \dfrac{372}{80 + 372} = \dfrac{372}{452} = 0,82$
+	\end{center}
+	b) Para uma população cuja prevalência da doença da artéria coronária seja 0,10,	calcule a probabilidade de que um indivíduo tenha a doença, sendo que ele apresenta resultado positivo usando a ventriculografia radionuclídica.\\
+	\begin{center}
+		$\mathbb{P}$(Doença artéria coronária|Teste positivo) = sensibilidade*prevalência\\
+		\vspace{0,25cm}
+		$\mathbb{P}$(Túnel do carpo|Teste positivo) = $0,82*0,10 = 0,082$
+	\end{center}
+	\vspace{1cm}
+	c) Qual o valor preditivo de um teste negativo.
+	\begin{center}
+		Valor preditivo negativo = $\dfrac{d}{c + d} = \dfrac{372}{179 + 372} = \dfrac{372}{551} = 0,675$
+	\end{center}
+	\vspace{1cm}
+	\textbf{Intervalo de confiança, teste de hipótese}\\
+	15º) Os seguintes dados foram coletados para uma amostra de uma população normal: 10, 8, 12, 15, 13, 11, 6, 5.\\
+	a) Qual a estimativa pontual da média populacional?\\
+	\begin{center}
+		Média = $\dfrac{5 + 6 + 8 + 10 + 11 + 12 + 13 + 15}{8} = \dfrac{80}{8} = 10$
+	\end{center}
+	\vspace{1cm}
+	b) Qual a estimativa pontual do desvio padrão da população?\\
+	\begin{center}
+		\begin{center}
+			\begin{tabular}{|c|c|c|} \hline
+				\multicolumn{2}{|c|}{$(x - \overline{x})$} & $(x - \overline{x})^2$\\ \hline
+				(5 - 10) & -5 & 25\\ \hline
+				(6 - 10) & -4 & 16\\ \hline
+				(8 - 10) & -2 & 4\\ \hline
+				(10 - 10) & 0 & 0\\ \hline
+				(11 - 10) & 1 & 1\\ \hline
+				(12 - 10) & 2 & 4\\ \hline
+				(13 - 10) & 3 & 9\\ \hline
+				(15 - 10) & 5 & 25\\ \hline
+				\multicolumn{2}{|c|}{Total} & 84\\ \hline
+			\end{tabular}
+			\vspace{0.5cm}\\
+			Desvio Padrão = $\sqrt{\dfrac{84}{8}} = \sqrt{10,5} = 3,24$
+		\end{center}
+	\end{center}
+	\vspace{1cm}
+	c) Qual o intervalo de confiança com 95\% para a média da população?
+	\vspace{0.5cm}
+	\begin{center}
+		Intervalo inferior = $\overline{x} - z*\dfrac{\sigma}{\sqrt{n}} = 10,5 - 1,96*\dfrac{3,24}{\sqrt{8}} = 10,5 - 2,245 = 8,255$
+		\vspace{0.5cm}\\
+		Intervalo superior = $\overline{x} + z*\dfrac{\sigma}{\sqrt{n}} = 10,5 + 1,96*\dfrac{3,24}{\sqrt{8}} = 10,5 + 2,245 = 12,745$
+	\end{center}
+	\vspace{1cm}
+	16º) Considere o seguinte teste de hipótese.\\
+	\begin{center}
+		$\mathit{H}_{0} : \mu \geq 10$\\
+		$\mathit{H}_{a} : \mu < 10$
+	\end{center}
+	Uma amostra com n=50 fornece uma média de amostra de 9,46 e um desvio padrão da amostra de 2.\\
+	a) Com $\alpha$ = 0,05, qual o valor crítico para Z? Qual a regra de rejeição?
+	\vspace{0.5cm}\\
+	O valor crítico para a estatística Z unilateral com significância $\alpha$ = 0,05 é -1,645, pois a hipótese nula afirma que a média é maior ou igual ao valor de referência 10. Deste modo, a regra para rejeição da hipótese nula é obter um valor estatístico para média inferior a -1,645.
+	\vspace{1cm}\\
+	b) Calcule o valor da estatística de z. Qual a sua conclusão?
+	\vspace{0.5cm}
+	\begin{center}
+		z = $\dfrac{\overline{x}-\mu}{\dfrac{\sigma}{\sqrt{n}}} = \dfrac{9,46 - 10}{\dfrac{2}{\sqrt{50}}} = \dfrac{-0,54}{\dfrac{2}{7,07}} = \dfrac{-0,54}{1}*\dfrac{7,07}{2} = \dfrac{-3,8178}{2}  = -1,9089$
+	\end{center}
+	\vspace{0.5cm}
+	Como o valor da estatística Z foi inferior a -1,645, pode-se rejeitar a hipótese nula com de 95\% de acurácia.
+	\vspace{1cm}\\
+	\textbf{Teste Qui-quadrado}\\
+	17º) Os dados seguintes vêm de um estudo concebido para investigar problemas de bebidas	entre os estudantes universitários. Em 1983, foi perguntado a um grupo se já dirigira um	automóvel depois de beber. Em 1987, depois de atingida a idade legal para consumo de	bebidas alcoólicas, foi feita a mesma questão a outro grupo universitário.
+	\begin{center}
+		\begin{tabular}{|l|l|l|l|}\hline
+			\multirow{2}*{\textbf{Dirigia enquanto bebia}} & \multicolumn{3}{|l|}{\textbf{Ano}}\\ \cline{2-4}
+			& \textbf{1983} & \textbf{1987} & \textbf{Total}\\ \hline
+			\textbf{Sim} & 1.250 & 991 & \textbf{2.241}\\ \hline
+			\textbf{Não} & 1.387 & 1.666 & \textbf{3.053}\\ \hline
+			\textbf{Total} & \textbf{2.637} & \textbf{2.657} & \textbf{5.294}\\ \hline
+		\end{tabular}
+	\end{center}
+	\vspace{1cm}
+	a) Use o teste qui-quadrado para avaliar a hipótese nula de que as proporções de estudantes da população que dirigia enquanto bebia são as mesmas nos dois anos.
+	\vspace{0.5cm}\\
+	Eventos:\\
+	X = Ano\\
+	Y = Dirigia bêbado\\
+	\begin{center}
+		\vspace{0.5cm}
+		(X=1983 $\cap$ Y=Sim) = $\dfrac{1.250}{5.294} = 0,2361$
+		\vspace{0.5cm}\\
+		(X=1983 $\cap$ Y=Não) = $\dfrac{1.387}{5.294} = 0,2620$
+		\vspace{0.5cm}\\
+		(X=1987 $\cap$ Y=Sim) = $\dfrac{991}{5.294} = 0,1872$
+		\vspace{0.5cm}\\
+		(X=1987 $\cap$ Y=Não) = $\dfrac{1.666}{5.294} = 0,3147$
+		\vspace{0.75cm}\\
+		\begin{tabular}{|c|c|}\hline
+			$\mathbb{P}(X=x)\mathbb{P}(Y=y)$ & Valor esperado (E)\\ \hline
+			$\dfrac{2.241}{5.294}*\dfrac{2.637}{5.294}$ & 0,2109\\ \hline
+			$\dfrac{2.241}{5.294}*\dfrac{2.657}{5.294}$ & 0,2124\\ \hline
+			$\dfrac{3.053}{5.294}*\dfrac{2.637}{5.294}$ & 0,2873\\ \hline
+			$\dfrac{3.053}{5.294}*\dfrac{2.657}{5.294}$ & 0,2894\\ \hline
+		\end{tabular}
+	\vspace{0.5cm}\\
+	GL = (n - 1)*(m - 1) = (2-1)*(2-1) = 1*1 = 1
+	\vspace{0.75cm}\\
+	X$^{2} = \dfrac{\Sigma(O_{i}-E_{i})^2}{E_{i}}$
+	\vspace{0.25cm}\\
+	$\dfrac{(0,2361 - 0,2109)^2}{0,2109} + \dfrac{(0,2620 - 0,2873)^2}{0,2873} + \dfrac{(0,1872 - 0,2124)^2}{0,2124} + \dfrac{(0,3147 - 0,2894)^2}{0,2894}$
+	\vspace{0.25cm}\\
+	X$^{2} = \dfrac{0,0252^2}{0,2109} + \dfrac{(-0,0253)^2}{0,2873} + \dfrac{(-0,0252)^2}{0,2124} + \dfrac{0,0253^2}{0,2894}$
+	\vspace{0.25cm}\\
+	X$^{2} = \dfrac{0,000635^2}{0,2109} + \dfrac{0,000640^2}{0,2873} + \dfrac{0,000635^2}{0,2124} + \dfrac{0,000640^2}{0,2894}$
+	\vspace{0.25cm}\\
+	X$^{2} = 0,003011 + 0,002228 + 0,002990 + 0,002211$
+	\vspace{0.25cm}\\
+	X$^{2} = 0,001044$
+	\vspace{0.75cm}\\
+	valor-p $\approx$ 0,025
+	\vspace{0.5cm}\\
+	valor-p  < $\alpha \rightarrow$ Rejeita H$_{0}$ 
+	\end{center}
+	\vspace{1cm}
+	b) O que você conclui sobre o comportamento desses estudantes?
+	\vspace{0.5cm}\\
+	A partir da análise dos dados é possível concluir que existe uma associação entre a variável ano e a variável dirigia bêbado. O que nos faz rejeitar a hipótese H$_{0}$.
+	\vspace{1cm}\\
+	\textbf{Correlação e Regressão}\\
+	18º) Cinco observações tomadas para duas variáveis são apresentadas a seguir:
+	\begin{center}
+		\begin{tabular}{|c|l|l|l|l|l|}\hline
+			x$_{i}$ & 4 & 6 & 11 & 3 & 16\\ \hline
+			y$_{i}$ & 50 & 50 & 40 & 60 & 30\\ \hline
+		\end{tabular}
+	\end{center}
+	a) Desenvolva um diagrama de dispersão com x no eixo horizontal.
+	\begin{center}	
+		\begin{tikzpicture}
+		\begin{axis}[xmin=0, xmax=20, ymin=20, ymax=70, xlabel=x, ylabel=y]
+		\addplot[color=red, only marks,mark=*]
+		coordinates{
+			(4,50)
+			(6,50)
+			(11,40)
+			(3,60)
+			(16,30)
+		}; \label{plot_one}			
+	\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	\vspace{1cm}
+	b) O que o diagrama de dispersão, desenvolvido no item (a) indica sobre a relação	entre as duas variáveis?
+	\vspace{0.5cm}\\
+	Indica uma relação direta inversa, conforme os valores de x crescem os valores de y caem.
+	\vspace{1cm}\\
+	c) Calcule e interprete a covariância da amostra.
+	\begin{center}
+		\begin{tabular}{c|c|c|c|c|c|c|c|}\cline{2-8}
+			& x$_{i}$ & y$_{i}$ & x$_{i} - \overline{x}$ & y$_{i}  - \overline{y}$ & (x$_{i} - \overline{x})^2$ & (y$_{i} - \overline{y})^2$ & (x$_{i} - \overline{x}$)(y$_{i}  - \overline{y}$)\\ \cline{2-8}
+			& 4 & 50 & -4 & 4 & 16 & 16 & -16\\ \cline{2-8}
+			& 6 & 50 & -2 & 4 & 4 & 16 & -8\\ \cline{2-8}
+			& 11 & 40 & 3 & -6 & 9 & 36 & -18\\ \cline{2-8}
+			& 3 & 60 & -5 & 14 & 25 & 196 & -70\\ \cline{2-8}
+			& 16 & 30 & 8 & -16 & 64 & 256 & -128\\ \cline{2-8}
+			$\Sigma$ & 40 & 230 & \multicolumn{1}{}{} & & 118 & 520 & -240\\ \cline{2-3} \cline{6-8}
+		\end{tabular}
+		\vspace{0.5cm}\\
+		Cov$_{x,y} = \dfrac{\Sigma (x_{i} - \overline{x})(y_{i}  - \overline{y})}{n-1} = \dfrac{-240}{5-1} = \dfrac{-240}{4} = -60$
+	\end{center}
+	\vspace{0.5cm}
+	A covariância é negativa, o que significa que a dependência linear entre as variáveis tem sentido oposto.
+	\vspace{1cm}\\
+	d) Calcule e interprete o coeficiente de correlação da amostra.
+	\begin{center}
+		S$_{x} = \sqrt{\dfrac{\Sigma(x_{i} - \overline{x})^2}{n-1}} = \sqrt{\dfrac{118}{5-1}} = \sqrt{\dfrac{118}{4}} = \sqrt{29,5} = 5,43$
+		\vspace{0.5cm}\\
+		S$_{y} = \sqrt{\dfrac{\Sigma(y_{i} - \overline{y})^2}{n-1}} = \sqrt{\dfrac{520}{5-1}} = \sqrt{\dfrac{520}{4}} = \sqrt{130} = 11,40$
+		\vspace{0.5cm}\\
+		r$_{x,y} = \dfrac{Cov_{x,y}}{S_{x}S_{y}} = \dfrac{-60}{5,43*11,40} =  -0,9693$
+	\end{center}
+	\vspace{0.5cm}
+	A variável preditiva x explica, aproximadamente, 96,93\% da variação da variável resposta y, e por ter uma correlação negativa as variáveis tem suas variações em sentido inverso.
+	\vspace{1cm}\\
+	19º) Dada cinco observações para duas variáveis, x e y.
+	\begin{center}
+		\begin{tabular}{|c|l|l|l|l|l|}\hline
+			x$_{i}$ & 1 & 2 & 3 & 4 & 5\\ \hline
+			y$_{i}$ & 3 & 7 & 5 & 11 & 14\\ \hline
+		\end{tabular}
+	\end{center}
+	a) Desenvolva o diagrama de dispersão par esses dados.
+	\begin{center}	
+		\begin{tikzpicture}
+		\begin{axis}[xmin=0, xmax=6, ymin=0, ymax=15, xlabel=x, ylabel=y]
+		\addplot[color=red, only marks,mark=*]
+		coordinates{
+			(1,3)
+			(2,7)
+			(3,5)
+			(4,11)
+			(5,14)
+		}; \label{plot_one}			
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+	b) O que o diagrama de dispersão, desenvolvido no item (a) indica sobre a relação entre as duas variáveis?
+	\vspace{0.5cm}\\
+	Indica uma relação direta, conforme os valores de x crescem os valores de y seguem o mesmo comportamento.
+	\vspace{1cm}\\
+	c) Desenvolva uma equação de regressão estimada calculando os valores de $\hat{\beta_{0}}$ e $\hat{\beta_{1}}$ usando qualquer método de estimação e cite o método que usou.
+	\vspace{0.5cm}\\
+	Método dos mínimos quadrados (MMQ)
+	\vspace{0.5cm}
+		\begin{center}
+			\begin{tabular}{c|c|c|c|c|c|c|}\cline{2-7}
+				& x$_{i}$ & y$_{i}$ & x$_{i} - \overline{x}$ & y$_{i}  - \overline{y}$ & (x$_{i} - \overline{x})^2$ & (x$_{i} - \overline{x}$)(y$_{i} - \overline{y}$)\\ \cline{2-7}
+				& 1 & 3 & -2 & -5 & 4 & 10\\ \cline{2-7}
+				& 2 & 7 & -1 & -1 & 1 & 1\\ \cline{2-7}
+				& 3 & 5 & 0 & -3 & 0 & 0\\ \cline{2-7}
+				& 4 & 11 & 1 & 3 & 1 & 3\\ \cline{2-7}
+				& 5 & 14 & 2 & 6 & 4 & 12\\ \cline{2-7}
+				$\Sigma$ & 15 & 40 & \multicolumn{1}{}{} & & 10 	& 26\\ \cline{2-3} \cline{6-7}
+				Média & 3 & 4 & \multicolumn{4}{}{}\\ \cline{2-3}
+			\end{tabular}
+			\vspace{0.5cm}\\
+			$\hat{\beta_{1}} = \dfrac{\Sigma((x_{i} - \overline{x})(y_{i} - \overline{y}))}{\Sigma(x_{i} - \overline{x})^2} = \dfrac{26}{10} = 2,6$
+			\vspace{0.5cm}\\
+			$\hat{\beta_{0}} = \overline{y} - \hat{\beta_{1}}\overline{x} = 8 - 2,6*3 = 8 - 7,8 = 0,2$
+		\end{center}
+	\vspace{1cm}
+	d) Use a equação de regressão estimada para determinar o valor de y quando x=4.
+	\vspace{0.5cm}
+	\begin{center}
+		$\hat{y} = 0,2 + 2,6*\hat{x} = 0,2 + 2,6*4 = 0,2 + 10,4 = 10,6$ 
+	\end{center}
+	\vspace{1cm}
+	\textbf{Regressão logística}\\
+	20º) Em um estudo que investiga os fatores de risco maternais para sífilis congênita, a doença é tratada como uma variável resposta dicotômica, na qual 1 representa a presença da doença em um recém nascido e 0 sua ausência. Os coeficientes estimados do modelo de regressão logística que contém as variáveis explicativas uso de cocaína ou crack, status marital, número de consultas pré-natais, uso de álcool e nível educacional estão listados abaixo. O intercepto não é dado.
+	\begin{center}
+		\begin{tabular}{|c|c|}\hline
+			\textbf{Variável} & \textbf{Coeficiente}\\ \hline
+			Uso de cocaína/crack & 1,354\\ \hline
+			Status marital & 0,779\\ \hline
+			Número de consultas pré-natais & -0,098\\ \hline
+			Uso de álcool & 0,723\\ \hline
+			Nível educacional & 0,298\\ \hline
+		\end{tabular}
+	\end{center}
+	a) Conforme o número de consulta pré-natais aumente, o que acontece com a probabilidade de uma criança nascer com sífilis?
+	\vspace{0.5cm}\\
+	A relação é inversa, quanto maior o número de consultas menores os índices de sífiles congênita em crianças recém-nascidas.
+	\vspace{1cm}\\
+	b) O status marital representa uma variável dicotômica, na qual o valor 1 indica que a mulher não é casada e 0 que ela é casada. Qual a chance relativa de que um recém nascido
+	tenha sífilis para mães não casadas versus as mães casadas?
+	\vspace{0.5cm}\\
+	\begin{center}
+		$e^{\beta x} = e^{0,779} = 2,179$
+	\end{center}
+	\vspace{1cm}	
+	c) O uso de cocaína ou de crack também é uma variável aleatória dicotômica; o valor 1 indica que uma mulher usou drogas durante a gravidez e 0 que não usou. Qual a razão de chances estimada de uma criança nascer com sífilis para as mulheres que usaram cocaína ou crack versus as que não usaram?
+	\vspace{0.5cm}
+	\begin{center}
+		$e^{\beta x} = e^{1,354} = 3,873$
+	\end{center}
+	\vspace{0.5cm}
+	Os filhos de mulheres que usaram cocaína/crack durante a gestação tem 3,873 mais chances de apresentarem sífilis congênita ao nascer do que os filhos de mulheres que não usaram.
+\end{document}
