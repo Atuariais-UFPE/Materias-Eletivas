@@ -1,9 +1,8 @@
-install.packages('survival')
+library(survival)
 
 tempos<-c(7,8,8,8,8,12,12,17,18,22,30,30,30,30,30,30,8,8,9,10,10,14,15,15,18,19,21,22,22,23,25,8,8,8,8,8,8,9,10,10,10,11,17,19)
 cens<-c(rep(1,10), rep(0,6), rep(1,15), rep(1,13))
 grupo<-c(rep(1,16), rep(2,15), rep(3,13))
-require(survival)
 ekm<-survfit(Surv(tempos,cens)~grupo)
 summary(ekm)
 plot(ekm, lty=c(1,4,2), xlab="Tempo", ylab="S(t) estimada")
