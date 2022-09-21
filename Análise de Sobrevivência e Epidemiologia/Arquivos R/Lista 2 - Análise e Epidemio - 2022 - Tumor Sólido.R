@@ -25,7 +25,7 @@ legend(1, 0.3, lty=1, c("Tumor Sólido"), lwd=1, bty="n", cex=0.8)
 
 # Entrada dos dados
 intervalos<-c(3,4,5.7,6.5,8.4,10,12,15)
-reincidencia<-c(1,0,0,2,0,0,1,1)
+reincidencia<-c(1,0,0,2,0,1,1,1)
 cens<-c(0,1,1,0,1,1,0,0)
 
 # Estimador Atuarial
@@ -36,6 +36,6 @@ round(eac, 4)
 x<-rep(intervalos, rep(2,8))[1:15]
 x<-append(x, 0, 0)
 y<-rep(eac$surv, rep(2,8))
-plot(x, y, type="l", lty=1, xlab="Tempo (em semanas)", ylab="S(t) estimada", xlim=c(0,16), ylim=c(0,1), main="Curva de Sobrevivência Atuarial de Reincidência de Tumor Sólido")
+plot(x, y, type="l", lty=1, xlab="Tempo (em semanas)", ylab="S(t) estimada", xlim=c(0,15), ylim=c(0,1), main="Curva de Sobrevivência Atuarial de Reincidência de Tumor Sólido")
 abline(h=0.5, col="red")
 legend(1, 0.3, lty=1, c("Tumor Sólido"), lwd=1, bty="n", cex=0.8)
