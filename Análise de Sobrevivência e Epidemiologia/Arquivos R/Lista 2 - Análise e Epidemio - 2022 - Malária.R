@@ -17,6 +17,7 @@ abline(h=0.5, col="red")
 legend(1, 0.3, lty=c(1,4,2), c("Grupo 1","Grupo 2","Grupo 3"), lwd=1, bty="n", cex=0.8)
 
 # Log-rank estimador Kaplan-Meier
+survdiff(Surv(tempos,eventos)~grupo, rho=0)
 survdiff(Surv(tempos[1:31],eventos[1:31])~grupo[1:31], rho=0)
 survdiff(Surv(tempos[17:44],eventos[17:44])~grupo[17:44], rho=0)
 survdiff(Surv(c(tempos[1:16],tempos[32:44]),c(eventos[1:16],eventos[32:44]))~c(grupo[1:16],grupo[32:44]), rho=0)
