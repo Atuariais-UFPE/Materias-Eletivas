@@ -61,7 +61,6 @@ abline(h=0.5, col="red")
 x2<-rep(intervalos[8:18], rep(2,11))[1:21]
 x2<-append(x2, 0, 0)
 y2<-rep(eac.g2$surv, rep(2,11))
-#y2[is.na(y2)]<-0
 par(new=TRUE)
 plot(x2, y2, type="l", lty=4,  xlab="Tempo (em semanas)", ylab="S(t) estimada", xlim=c(0,30), ylim=c(0,1))
 x3<-rep(intervalos[19:24], rep(2,6))[1:11]
