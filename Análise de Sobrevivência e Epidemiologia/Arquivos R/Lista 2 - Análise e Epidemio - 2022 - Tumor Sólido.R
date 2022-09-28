@@ -1,3 +1,6 @@
+# Instalando bibliotecas
+#install('KMsurv') # Apenas na primeira vez que rodar o código
+
 library('survival')
 library('KMsurv')
 
