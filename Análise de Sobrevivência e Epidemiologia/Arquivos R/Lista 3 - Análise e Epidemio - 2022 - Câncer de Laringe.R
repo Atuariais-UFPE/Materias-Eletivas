@@ -2,7 +2,7 @@
 library('survival')
 
 # Definindo diretório de trabalho
-setwd(getwd())
+setwd(getwd()) # Selecionar o diretório de forma manual antes
 
 # Leitura dos dados
 laringe<-read.table("laringe.txt", h=T) # Colocar o arquivo do banco de dados na mesma pasta do código
@@ -28,18 +28,18 @@ summary(fit4)
 fit4$loglik
 
 # Resíduos de Schoenfeld, verificação da suposição de riscos proporcionais (Modelo fit 3)
-
 resid(fit3,type="scaledsch")
 cox.zph(fit3, transform="identity")
 par(mfrow=c(1,2))
-plot(cox.zph(fit3))
+plot(cox.zph(fit3), xlab = "Tempo", ylab = c("Beta para o Fator Estágio", "Beta para o Fator Idade"))
+mtext("Valores de Beta ao Longo do Tempo", side = 3, line = - 2, outer = TRUE)
 
 # Resíduos de Schoenfeld, verificação da suposição de riscos proporcionais (Modelo fit 4)
 resid(fit4,type="scaledsch")
 cox.zph(fit4, transform="identity")
 par(mfrow=c(1,3))
-plot(cox.zph(fit4))
-
+plot(cox.zph(fit4), xlab = "Tempo", ylab = c("Beta para o Fator Estágio", "Beta para o Fator Idade", "Beta para o Fator Estágio x Idade"))
+mtext("Valores de Beta ao Longo do Tempo", side = 3, line = - 2, outer = TRUE)
 
 # Estimando a função sobrevida e a função taxa de falha acumulada
 Ht<-basehaz(fit4,centered=F)
